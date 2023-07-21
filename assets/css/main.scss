@@ -1,0 +1,18 @@
+// slick slider
+@import "./4-slider/slick.scss";
+@import "./4-slider/slick-theme.scss";
+
+//0-main
+@import "./0-main/animations.scss";
+@import "./0-main/variables.scss";
+@import "./0-main/typography.scss";
+@import "./0-main/nulifier.scss";
+
+//1-components
+@import "./1-components/components.scss";
+@import "./1-components/header.scss";
+
+//2-sections
+@import "./2-sections/hero.scss";
+@import "./2-sections/about.scss";
+@import "./2-sections/service.scss";

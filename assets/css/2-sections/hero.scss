@@ -1,0 +1,62 @@
+.hero{
+    margin-bottom: 30px;
+    position: relative;
+    padding: 60px 0;
+    color: $white;
+    height: 1080px;
+
+    .autoContainer{
+        height: 100%;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+
+        h1{max-width: 970px;
+            text-transform: uppercase;
+        }
+        p{
+            max-width: 676px;
+        }
+
+        .buttons{
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+    }
+
+    &-bg{
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url("C:\Users\User\Desktop\better_builders\assets\images\hero_banner.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100%;
+            width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        svg{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+
+}

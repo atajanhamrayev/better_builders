@@ -1,0 +1,46 @@
+.about{
+    padding: 30px 0;
+
+    .autoContainer{
+        margin: 0 71px 0 187px;
+        padding: 0;
+    }
+
+    &__inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        &-banner{
+            transform: translateX(-31px);
+        }
+
+        &-content{
+            max-width: calc(50% - 10px);
+
+            h3{
+                max-width: 540px;
+            }
+            
+
+
+            .grid{
+                &-group{
+                    max-width: 607px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 28px;
+                }
+
+                &-row{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+            
+        }
+    }
+}

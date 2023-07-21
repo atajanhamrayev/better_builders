@@ -1,0 +1,36 @@
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 51px 0;
+    color: $white;
+    z-index: 0;
+
+
+    .autoContainer{
+        max-width: 1676px;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        align-items: center;
+
+        .nav{
+            display: flex;
+            align-items: center;
+            gap: 81px;
+        }
+
+        .logo{
+            margin-right: 10px;
+        }
+    }
+
+    &.active{
+        background-color: $gray;
+        z-index: 1;
+    }
+}
