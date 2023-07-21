@@ -40,6 +40,7 @@ if (slickSlider1) {
 if (slickSlider2) {
     $(slickSlider2).slick({
       dots: false,
+      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 2,
       infinite: true,

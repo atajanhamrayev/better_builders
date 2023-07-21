@@ -2,9 +2,8 @@
     padding: 38px 0;
 
     .autoContainer{
-        max-width: 1739px;
-        margin-right: 54px;
-        padding: 0;
+        max-width: 1793px;
+        margin-left: 67px;
         width: 100%;
     }
 
@@ -58,6 +57,7 @@
                 flex-direction: column;
                 gap: 14px;
                 box-shadow: 0.1px 0.1px 9.5px rgba(0, 0, 0, 0.16);
+                background-color: $white;
 
                 .icon{
                     width: 110px;

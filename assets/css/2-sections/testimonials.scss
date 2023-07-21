@@ -1,0 +1,83 @@
+.testimonials{
+    padding: 70px 0;
+    position: relative;
+    color: $white;
+
+    .autoContainer{
+        max-width: 1793px;
+        margin-left: 67px;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+        align-items: center;
+        justify-content: center;
+
+        .title{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &-slider{
+        width: 100%;
+    }
+
+    &-box{
+        max-width: 553px;
+        position: relative;
+        padding: 75px 0 0 0;
+        display: flex;
+        cursor: pointer;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 46px;
+        }
+
+        .box-content{
+            display: flex;
+            flex-direction: row;
+            background-color: $light-blue;
+            height: 270px;
+            justify-content: center;
+            padding: 108px 25px 29px 31px;
+            gap: 34.5px;
+
+            &::before{
+                content: "";
+                width: 0;
+                height: 120px;
+                border: 5px solid $orange;
+            }
+
+            h5{
+                color: $orange;
+                line-height: 1.42;
+            }
+        }
+
+        
+    }
+
+    &-bg{
+        position: absolute;
+        background-color: $blue;
+        height: 1000px;
+        width: 100%;
+        top: -40%;
+        left: 0;
+        z-index: -1;
+
+        img{
+            transform: translateX(-16.23%);
+            background: lightgray 50% / cover no-repeat;
+            mix-blend-mode: color-dodge;
+        }
+    }
+}
