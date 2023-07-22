@@ -96,3 +96,30 @@ img, svg{
   pointer-events: none;
 }
 
+//max-width: 1280px
+@mixin nulifier-lg{
+  *{
+    font-size: 18px;
+  }
+}
+
+//max-width: 940px
+@mixin nulifier-md{
+  *{
+    font-size: 16px;
+  }
+}
+
+//max-width: 660px
+@mixin nulifier-s{
+  *{
+    font-size: 14px;
+  }
+}
+
+//max-width: 480px
+@mixin nulifier-xxs{
+  *{
+    font-size: 12px;
+  }
+}

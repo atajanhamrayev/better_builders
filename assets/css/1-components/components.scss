@@ -1,5 +1,6 @@
 .autoContainer{
-    max-width: 1666px;
+    max-width: 1800px;
+    margin: 0 auto;
     padding: 0 60px;
     box-sizing: content-box;
 }
@@ -7,7 +8,7 @@
 .logo {
     padding: 0;
     display: flex;
-    font-size: 1rem;
+    font-size: 1em;
     width: 11.45em;
     height: 3.295em;
 
@@ -25,7 +26,7 @@
     font-size: 10px;
     width: 2.6em;
     height: 2em;
-    color: $orange;
+    color: $white;
     background-color: transparent;
     transition: 0.2s ease;
 
@@ -90,7 +91,7 @@
         height: 1.9em;
         padding: unset;
         border-radius: 50%;
-        background-color: $orange;
+        background-color: $white;
         font-size: 1em;
         border: none;
 
@@ -109,3 +110,23 @@
         }
     }
 }
+
+input, select, textarea{
+                font-family: inherit;
+                font-weight: 500 !important;
+                font-size: 1.1em;
+                line-height: 1.40;
+}
+//max-width: 940px
+@mixin components-md{
+    .autoContainer{
+        padding: 0 45px;
+    }
+  }
+
+//max-width: 768px
+@mixin components-xxmd{
+    .autoContainer{
+        padding: 0 30px;
+    }
+  }

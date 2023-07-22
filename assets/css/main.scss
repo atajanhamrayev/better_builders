@@ -11,9 +11,16 @@
 //1-components
 @import "./1-components/components.scss";
 @import "./1-components/header.scss";
+@import "./1-components/footer.scss";
+
 
 //2-sections
 @import "./2-sections/hero.scss";
 @import "./2-sections/about.scss";
 @import "./2-sections/service.scss";
 @import "./2-sections/testimonials.scss";
+@import "./2-sections/projects.scss";
+@import "./2-sections/contact.scss";
+
+//responsive
+@import "./1-components/responsive.scss";
