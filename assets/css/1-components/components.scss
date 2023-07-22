@@ -130,3 +130,10 @@ input, select, textarea{
         padding: 0 30px;
     }
   }
+
+  //max-width: 480px
+@mixin components-xxs{
+    .autoContainer{
+        padding: 0 15px;
+    }
+  }

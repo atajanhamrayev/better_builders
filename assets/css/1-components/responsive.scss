@@ -1,33 +1,42 @@
 @media (max-width: 1720px){
     @include typography-xxxl;
+    @include nulifier-xxxl;
 }
-
+@media (max-width: 1440px){
+    @include about-xl;
+}
 @media (max-width: 1280px){
-    @include nulifier-lg;
     @include typography-lg;
     @include header-lg;
 }
-
-@media (max-width: 1025px){
-    
+@media (max-width: 1160px){
+    @include about-xlg;
 }
 
 @media (max-width: 940px){
     @include nulifier-md;
     @include typography-md;
     @include components-md;
+    @include hero-md;
+    @include about-md;
 }
 
 @media (max-width: 768px){
     @include components-xxmd;
+    @include hero-xxmd;
+    @include about-xxmd;
 }
 
 @media (max-width: 680px){
     @include typography-s;
     @include nulifier-s;
+    @include about-s;
 }
 
 @media (max-width: 480px){
+    @include components-xxs;
     @include nulifier-xxs;
+    @include about-xxs;
+
 }
 

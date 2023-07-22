@@ -15,7 +15,6 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
 .slick-list {
   position: relative;
   overflow: hidden;
@@ -30,20 +29,25 @@
   cursor: pointer;
   cursor: hand;
 }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.slick-slider .slick-track, .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 .slick-track {
   position: relative;
   left: 0;
   top: 0;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+[dir=rtl] .slick-track {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 .slick-track:before, .slick-track:after {
   content: "";
@@ -55,15 +59,9 @@
 .slick-loading .slick-track {
   visibility: hidden;
 }
-
 .slick-slide {
-  float: left;
-  height: 100%;
   min-height: 1px;
   display: none;
-}
-[dir=rtl] .slick-slide {
-  float: right;
 }
 .slick-slide img {
   display: block;
@@ -85,9 +83,8 @@
   height: auto;
   border: 1px solid transparent;
 }
-
-.slick-arrow.slick-hidden {
-  display: none;
+.slick-hidden {
+  display: none !important;
 }
 
 /* Slider */
@@ -3994,11 +3991,6 @@ h1 {
 h2 {
   font-size: 3em;
 }
-h2 span {
-  font-size: 1.15rem;
-  opacity: 0.5;
-  text-transform: uppercase;
-}
 
 h3 {
   font-size: 2.2em;
@@ -4033,6 +4025,13 @@ h4,
 h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+  font-size: 1.15em;
+  opacity: 0.5;
+  text-transform: uppercase;
 }
 
 p {
@@ -4279,7 +4278,9 @@ input, select, textarea {
   left: 0;
   padding: 2.5em 0;
   color: #fff;
-  z-index: 0;
+  z-index: 1;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .header__inner {
   display: -webkit-box;
@@ -4309,7 +4310,8 @@ input, select, textarea {
   display: none;
 }
 .header.active {
-  background-color: #858282;
+  padding: 20px;
+  background-color: #262437;
   z-index: 1;
 }
 
@@ -4433,8 +4435,10 @@ input, select, textarea {
   position: relative;
   padding: 60px 0;
   color: #fff;
+  background-size: cover;
   height: calc(60vw - 72px);
   max-height: 1080px;
+  min-height: 750px;
 }
 .hero .autoContainer {
   height: 100%;
@@ -4470,31 +4474,6 @@ input, select, textarea {
   display: flex;
   gap: 20px;
 }
-.hero-bg img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background-image: url("C:UsersUserÞsktop¾tter_builders\assetsimageshero_banner.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  z-index: -2;
-}
-.hero-bg svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: conta;
-     object-fit: conta;
-  z-index: -1;
-}
 
 .about {
   padding: 30px 0;
@@ -4512,11 +4491,18 @@ input, select, textarea {
   gap: 30px;
 }
 .about__inner-banner {
+  width: calc(50% - 120px);
   -webkit-transform: translateX(-31px);
           transform: translateX(-31px);
 }
+.about__inner-banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .about__inner-content {
-  max-width: calc(50% - 10px);
+  width: calc(50% - 10px);
 }
 .about__inner-content h3 {
   max-width: 540px;
@@ -4546,6 +4532,7 @@ input, select, textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 
 .service {
@@ -4600,16 +4587,15 @@ input, select, textarea {
   opacity: 0.2;
 }
 .service-slider {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  margin: 0 -15px;
+  width: 100%;
 }
 .service-slider .box {
-  max-width: 408px;
-  padding: 29px 38px 41px 26px;
+  padding: 1.45em 2em 2em 1.3em;
+  margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4618,8 +4604,8 @@ input, select, textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 14px;
-  -webkit-box-shadow: 0.1px 0.1px 9.5px rgba(0, 0, 0, 0.16);
-          box-shadow: 0.1px 0.1px 9.5px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0.2px 0.1px 9.5px rgba(0, 0, 0, 0.16);
+          box-shadow: 0.2px 0.1px 9.5px rgba(0, 0, 0, 0.16);
   background-color: #fff;
 }
 .service-slider .box .icon {
@@ -4864,11 +4850,19 @@ input, select, textarea {
     font-size: 2em;
     line-height: 1.2;
   }
-}
-@media (max-width: 1280px) {
+  p {
+    font-size: 1em;
+  }
   * {
     font-size: 18px;
   }
+}
+@media (max-width: 1440px) {
+  .about__inner-banner {
+    width: calc(50% - 80px);
+  }
+}
+@media (max-width: 1280px) {
   h1 {
     font-size: 3em;
     line-height: 1;
@@ -4885,6 +4879,13 @@ input, select, textarea {
     z-index: 2;
   }
 }
+@media (max-width: 1160px) {
+  .about__inner-banner {
+    width: calc(50% - 60px);
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 @media (max-width: 940px) {
   * {
     font-size: 16px;
@@ -4892,13 +4893,51 @@ input, select, textarea {
   h1 {
     font-size: 2.8em;
   }
+  h3 {
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 0.8em;
+  }
   .autoContainer {
     padding: 0 45px;
+  }
+  .hero {
+    margin-bottom: 0px;
+  }
+  .hero__inner {
+    gap: 15px;
+  }
+  .hero__inner .buttons {
+    margin-top: 20px;
+    gap: 15px;
+  }
+  .about__inner-banner {
+    width: calc(50% - 30px);
   }
 }
 @media (max-width: 768px) {
   .autoContainer {
     padding: 0 30px;
+  }
+  .hero__inner {
+    gap: 10px;
+  }
+  .hero__inner .buttons {
+    margin-top: 15px;
+    gap: 10px;
+  }
+  .about__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about__inner-banner {
+    width: 50%;
+  }
+  .about__inner-content {
+    width: 100%;
   }
 }
 @media (max-width: 680px) {
@@ -4908,9 +4947,18 @@ input, select, textarea {
   * {
     font-size: 14px;
   }
+  .about__inner-banner {
+    width: 75%;
+  }
 }
 @media (max-width: 480px) {
+  .autoContainer {
+    padding: 0 15px;
+  }
   * {
     font-size: 12px;
+  }
+  .about__inner-banner {
+    width: 100%;
   }
 }

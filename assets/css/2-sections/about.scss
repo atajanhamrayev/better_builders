@@ -9,11 +9,18 @@
         gap: 30px;
 
         &-banner{
+            width: calc(50% - 120px);
             transform: translateX(-31px);
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         &-content{
-            max-width: calc(50% - 10px);
+            width: calc(50% - 10px);
 
             h3{
                 max-width: 540px;
@@ -34,9 +41,82 @@
                     flex-direction: row;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 10px;
                 }
             }
             
         }
     }
 }
+
+  //max-width: 1440px
+  @mixin about-xl{
+    .about{
+        &__inner{
+            &-banner{
+                width: calc(50% - 80px);
+            }
+        }
+    }
+  }
+
+    //max-width: 1160px
+    @mixin about-xlg{
+        .about{
+            &__inner{
+                &-banner{
+                    width: calc(50% - 60px);
+                    transform: none;
+                }
+            }
+        }
+      }
+
+      //max-width: 940px
+    @mixin about-md{
+        .about{
+            &__inner{
+                &-banner{
+                    width: calc(50% - 30px);
+                }
+            }
+        }
+      }
+
+//max-width: 768px
+@mixin about-xxmd{
+    .about{
+        &__inner{
+            flex-direction: column;
+            &-banner{
+                width: 50%;
+            }
+
+            &-content{
+                width: 100%;
+            }
+        }
+    }
+  }
+
+  //max-width: 680px
+@mixin about-s{
+    .about{
+        &__inner{
+            &-banner{
+                width: 75%;
+            }
+        }
+    }
+  }
+
+    //max-width: 480px
+@mixin about-xxs{
+    .about{
+        &__inner{
+            &-banner{
+                width: 100%;
+            }
+        }
+    }
+  }

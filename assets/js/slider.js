@@ -9,19 +9,13 @@ if (slickSlider1) {
     infinite: true,
     responsive: [
       {
-        breakpoint: 1360,
+        breakpoint: 1810,
         settings: {
           slidesToShow: 4,
         },
       },
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 840,
+        breakpoint: 1600,
         settings: {
           slidesToShow: 3,
           arrows: false,
