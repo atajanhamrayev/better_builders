@@ -1,59 +1,90 @@
-.contact{
+.contact {
     padding: 30px 0 90px 0;
 
-    &__inner{
+    &__inner {
         display: flex;
         flex-direction: column;
         gap: 30px;
 
-        &-title{
+        &-title {
             max-width: 506px;
         }
 
-        label{
+        label {
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 23px;
             font-weight: 500;
-            
 
-            input, select, textarea{
+
+            input,
+            select,
+            textarea {
                 background-color: $white-4;
                 width: 100%;
-                padding: 30px 40px;
+                padding: 1.5em 2em;
                 border-radius: 10px;
             }
         }
-        .col{
+
+        .col {
             display: flex;
             flex-direction: column;
             gap: 42px;
 
-            .row{
+            .row {
                 display: flex;
                 gap: 26px;
 
-                label{
+                label {
                     width: calc(50% - 13px);
 
-                    input{
+                    input {
                         height: 90px;
                     }
                 }
             }
 
-            .message{
+            .message {
                 width: 100%;
 
-                textarea{
+                textarea {
                     height: 281px;
                 }
             }
-            
-            .button{
-                width: 240px;
-                height: 66px;
+
+            .button {
+                padding: 1em 4.5em;
+            }
+        }
+    }
+}
+
+//max-width: 768px
+@mixin contact-xxmd {
+    .contact {
+        padding: 30px 0;
+
+        .col {
+            gap: 20px;
+
+            .row {
+                flex-direction: column;
+
+                label {
+                    width: 100%;
+
+                    input {
+                        height: 60px;
+                    }
+                }
+            }
+
+            .message {
+                textarea {
+                    height: 180px;
+                }
             }
         }
     }

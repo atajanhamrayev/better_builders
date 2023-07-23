@@ -73,9 +73,15 @@ p{
 
   h3{
     font-size: 2em;
-    line-height: 1.2;
+    line-height: 1.4;
   }
   p{
+    font-size: 1em;
+    &_sm{
+      font-size: 0.7em;
+    }
+  }
+  h5{
     font-size: 1em;
   }
 }
@@ -84,12 +90,11 @@ p{
 @mixin typography-lg{
   h1{
     font-size: 3em;
-    line-height: 1;
+    line-height: 1.2;
   }
 
   h3{
     font-size: 1.8em;
-    line-height: 1;
   }
 }
 

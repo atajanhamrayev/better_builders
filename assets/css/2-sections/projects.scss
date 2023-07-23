@@ -4,16 +4,27 @@
     &__inner{
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 1.25em;
         align-items: flex-start;
 
         &-slider{
             width: 100%;
             display: flex;
+
+            .slick-slide {
+                padding:10px;
+                margin-right:10px;
+                margin-left:10px;
+    
+                & > div{
+                    height: 100%;
+                }
+            }
         }
     }
 
     &-box{
+        margin: 0 auto;
         max-width: 444px;
         display: flex;
         flex-direction: column;
@@ -26,13 +37,13 @@
         }
 
         &-content{
-            padding: 20px 30px;
+            padding: 1em 1.5em;
 
             .title{
-                margin-bottom: 9px;
+                margin-bottom: 0.5em;
             }
             p{
-                margin-bottom: 19px;
+                margin-bottom: 1em;
             }
         }
     }

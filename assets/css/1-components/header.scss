@@ -1,4 +1,4 @@
-.header{
+.header {
     position: fixed;
     top: 0;
     right: 0;
@@ -8,29 +8,52 @@
     z-index: 1;
     transition: all .2s linear;
 
-    
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
         gap: 50px;
         align-items: center;
 
-        .nav{
+        .nav {
             display: flex;
             align-items: center;
             gap: 81px;
+
+            a {
+                display: inline-block;
+                animation: bounce 1s;
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        transition: all ease .3s;
+                    }
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 4px;
+                    margin-top: 5px;
+                    background: $orange;
+                    transition: width .3s;
+
+
+                }
+            }
         }
 
-        .logo{
+        .logo {
             margin-right: 10px;
+            animation: bounce 1s;
         }
 
-        .burger{
+        .burger {
             display: none;
         }
     }
 
-    &.active{
+    &.active {
         padding: 20px;
         background-color: $light-blue;
         z-index: 1;
@@ -38,14 +61,13 @@
 }
 
 //max-width: 1280px
-@mixin header-lg{
-    .header{
-        &__inner{
-            .nav{
+@mixin header-lg {
+    .header {
+        &__inner {
+            .nav {
                 display: none;
             }
-        
-            .burger{
+            .burger {
                 display: block;
                 z-index: 2;
             }

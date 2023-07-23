@@ -1,79 +1,147 @@
-.testimonials{
+.testimonials {
     padding: 70px 0;
     margin-bottom: 52px;
     position: relative;
     color: $white;
 
-    &__inner{
+    &__inner {
         display: flex;
         flex-direction: column;
         gap: 51px;
         align-items: center;
         justify-content: center;
 
-        .title{
+        .title {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            h3{
+                text-align: center;
+            }
         }
     }
 
-    &-slider{
+    &-slider {
         width: 100%;
+
+        .slick-slide {
+            padding:10px;
+            margin-right:10px;
+            margin-left:10px;
+
+            & > div{
+                height: 100%;
+            }
+        }
     }
 
-    &-box{
+    &-box {
         max-width: 553px;
+        margin: 0 auto;
         position: relative;
         padding: 75px 0 0 0;
         display: flex;
         cursor: pointer;
+        height: 100%;
 
-        img{
+        .box-img {
             position: absolute;
             top: 0;
             left: 46px;
+            width: 8.95em;
+            height: 8.95em;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
-        .box-content{
+        .box-content {
             display: flex;
             flex-direction: row;
             background-color: $light-blue;
-            height: 270px;
+            height: 100%;
             justify-content: center;
-            padding: 108px 25px 29px 31px;
+            padding: 6.4em 1.25em 1.45em 1.55em;
             gap: 34.5px;
 
-            &::before{
+            &::before {
                 content: "";
                 width: 0;
-                height: 120px;
+                height: 90%;
                 border: 5px solid $orange;
             }
 
-            h5{
+            h5 {
                 color: $orange;
                 line-height: 1.42;
             }
         }
 
-        
+
     }
 
-    &-bg{
+    &-bg {
         position: absolute;
         background-color: $blue;
-        height: 1000px;
         width: 100%;
+        height: 150%;
         top: -40%;
         left: 0;
         z-index: -1;
 
-        img{
-            transform: translateX(-16.23%);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateX(-36%);
             background: lightgray 50% / cover no-repeat;
             mix-blend-mode: color-dodge;
+        }
+    }
+}
+
+
+//max-width: 1440px
+@mixin testimonials-xl {
+    .testimonials {
+        padding: 50px 0;
+        margin-bottom: 40px;
+
+        &__inner {
+            gap: 40px;
+        }
+
+        &-box{
+            .box-content{
+                gap: 20px;
+            }
+        }
+    }
+}
+
+//max-width: 768px
+@mixin testimonials-xxmd {
+    .testimonials {
+        padding: 30px 0;
+        margin-bottom: 25px;
+
+        &__inner {
+            gap: 30px;
+        }
+
+        &-box{
+            .box-content{
+                gap: 10px;
+
+                &::before{
+                    border-width: 3px;
+                }
+            }
         }
     }
 }

@@ -4,10 +4,14 @@
 }
 @media (max-width: 1440px){
     @include about-xl;
+    @include testimonials-xl;
+    @include footer-xl;
 }
 @media (max-width: 1280px){
     @include typography-lg;
     @include header-lg;
+    @include service-lg;
+    @include footer-lg;
 }
 @media (max-width: 1160px){
     @include about-xlg;
@@ -25,18 +29,22 @@
     @include components-xxmd;
     @include hero-xxmd;
     @include about-xxmd;
+    @include testimonials-xxmd;
+    @include contact-xxmd;
+    @include footer-xxmd;
 }
 
 @media (max-width: 680px){
     @include typography-s;
     @include nulifier-s;
     @include about-s;
+    @include service-s;
 }
 
 @media (max-width: 480px){
     @include components-xxs;
     @include nulifier-xxs;
     @include about-xxs;
-
+    @include footer-xxs;
 }
 
